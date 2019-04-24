@@ -69,13 +69,13 @@ int main(){
     ListaImprimir(l1);
     l1=ListaRetirar(l1,30);
     ListaImprimir(l1);
-    printf("Digite um numero para buscar\n");
+    printf("Digite um numero para buscar:\t");
     scanf("%d",&v);
     if(ListaBuscar(l1,v)!=NULL){
-        printf("Encontrado\n");
+        printf("Encontrado\n\n");
     }
     else {
-        printf("Nao Encontrado \n");
+        printf("Nao Encontrado \n\n");
     }
 return 0;
 }
