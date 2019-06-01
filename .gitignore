@@ -18,7 +18,8 @@ Apostilas C - Unicamp
 .vscode
 *.gdoc
 .idea
-.Trabalho_Final
+Trabalho_Final
+cmake-build-debug
 
 
 # Object files
