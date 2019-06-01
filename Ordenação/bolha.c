@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-void bolha(int tam_vetor, long unsigned int *v)
+void bolha(int tam_vetor, int *v)
 {
     int i, j, aux, troca;
     //Percorre todos os elementos do vetor
@@ -24,19 +24,20 @@ void bolha(int tam_vetor, long unsigned int *v)
 
 int main()
 {
-      clock_t c2, c1;
+    clock_t c2, c1;
     c1 = clock();
 
-    int i, h, k=3; unsigned long int mil[100001];
-    for (i=100000; i>0; i--){
-        k += k*2 ; 
-        mil[i] = k ;
-    }
+    int i, h, k=3; int mil[10001];
+        for (i=10000; i>0; i--){
+            k += i*2 ; 
+            mil[i] = k ;
+        }
 
-    bolha(sizeof(mil)/sizeof(unsigned long int), mil);
+
+    bolha(sizeof(mil)/sizeof(int), mil);
 
     printf ("\nVetor ordenado: \n");
-    for (h = 0; h < sizeof(mil) / sizeof(unsigned long int); h++)
+    for (h = 0; h < sizeof(mil) / sizeof(int); h++)
     {
         printf("%d\n", mil[h]);
     }

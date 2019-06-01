@@ -16,10 +16,10 @@ Apostilas C - Unicamp
 *.temp
 *.ipch
 .vscode
+*.gdoc
+.idea
+.Trabalho_Final
 
-
-# Prerequisites
-*.d
 
 # Object files
 *.o

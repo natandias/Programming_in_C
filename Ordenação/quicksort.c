@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-void quicksort(int  n, unsigned long int *v)
+void quicksort(int  n, int *v)
 {
     if (n <= 1)
     {
@@ -41,19 +41,20 @@ int main()
     clock_t c2, c1;
     c1 = clock();
 
-    int i, h, k=3; unsigned long int mil[100001];
-    for (i=100000; i>0; i--){
-        k += k*2 ; 
-        mil[i] = k ;
-    }
+    int i, h, k=3; int mil[100001];
+        for (i=100000; i>0; i--){
+            k += i*2 ; 
+            mil[i] = k ;
+        }
+
 
   /*  int v[] = {40, 55, 23, 35, 41, 15, 20, 07, 10, 05, 33, 19};
     int h;
 */
-    quicksort(sizeof(mil) / sizeof(unsigned long int), mil);
+    quicksort(sizeof(mil) / sizeof(int), mil);
 
     printf ("\nVetor ordenado: \n");
-    for (h = 0; h < sizeof(mil) / sizeof(unsigned long int); h++)
+    for (h = 0; h < sizeof(mil) / sizeof(int); h++)
     {
         printf("%d\n", mil[h]);
     }
